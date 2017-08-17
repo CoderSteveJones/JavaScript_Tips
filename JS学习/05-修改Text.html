@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-修改Text</title>
+    <style>
+        #text1 {
+            width: 200px;
+        }
+    </style>
+    <script>
+        function setText(name, value) {
+            var oText = document.getElementById('text1');
+            oText[name] = value;
+        }
+    </script>
+</head>
+<body>
+    <input id="text1" type="text">
+    <input type="button" value="change" onclick="setText('value', 'adc')">
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-选项卡</title>
+    <style>
+        #div1 div{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            background-color: grey;
+            display: none;
+        }
+        #div1 .selectedBtn {
+            background-color: yellow;
+        }
+        #div1 .selectedDiv {
+            display: block;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementById('div1');
+            var inputs = oDiv.getElementsByTagName('input');
+            var divs = oDiv.getElementsByTagName('div');
+
+            for (var i = 0;i < inputs.length;i ++){
+
+                inputs[i].index = i;
+                inputs[i].onclick = function () {
+
+
+                    for (var j = 0; j < inputs.length;j++){
+                        inputs[j].className = '';
+                        divs[j].style.display = 'none';
+                    }
+                    this.className = 'selectedBtn';
+                    divs[this.index].style.display = 'block';
+                }
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <input class="selectedBtn" type="button" value="教育">
+        <input type="button" value="培训">
+        <input type="button" value="招生">
+        <input type="button" value="出国">
+        <div class="selectedDiv">1111</div>
+        <div>2222</div>
+        <div>3333</div>
+        <div>4444</div>
+    </div>
+</body>
+</html>

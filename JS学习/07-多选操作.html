@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07-多选操作</title>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            var oDiv = document.getElementById('div');
+            var oChecks = oDiv.getElementsByTagName('input');
+            oBtn.onclick = function btnClick() {
+                oBtn.selected = !oBtn.selected;
+                for (var i = 0;i < oChecks.length;i ++){
+                    oChecks[i].checked = oBtn.selected;
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="全选" id="btn">
+    <div id="div">
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+    </div>
+</body>
+</html>

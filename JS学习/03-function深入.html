@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-function深入</title>
+    <link id="link1" rel="stylesheet" href="CSS/skin1.css">
+    <script>
+        function skin1() {
+            var link = document.getElementById('link1');
+            link.href = 'CSS/skin1.css';
+        }
+        function skin2() {
+            var link = document.getElementById('link1');
+            link.href = 'CSS/skin2.css';
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="skin1" onclick="skin1()">
+<input type="button" value="skin2" onclick="skin2()">
+</body>
+</html>

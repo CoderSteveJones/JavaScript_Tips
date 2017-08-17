@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-多元素操作</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            float: left;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var oDiv = document.getElementsByTagName('div');
+            for(var i = 0;i < oDiv.length;i ++)
+            {
+                oDiv[i].style.backgroundColor = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
