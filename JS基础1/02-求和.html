@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-求和</title>
+    <script>
+        window.onload = function () {
+            var oText1 = document.getElementById('txt1');
+            var oText2 = document.getElementById('txt2');
+            var oBtn = document.getElementById('btn');
+            oBtn.onclick = function sum() {
+                var v1 = oText1.value;
+                var v2 = oText2.value;
+                if (isNaN(v1)) {
+                    alert('你输入的第一个数字有误');
+                }else if (isNaN(v2)){
+                    alert('你输入的第二个数字有误');
+                }else {
+                    alert(parseInt(oText1.value) + parseInt(oText2.value));
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="txt1" type="text">
+<input id="txt2" type="text">
+<input id="btn" type="button" value="求和">
+</body>
+</html>
