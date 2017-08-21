@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-秒转时间</title>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            var oTxt = document.getElementById('txt1');
+            oBtn.onclick = function () {
+                if (isNaN(oTxt.value)) {
+                    alert('请输入正确的秒数！')
+                }else {
+                    var nMin = oTxt.value / 60;
+                    var nSec = oTxt.value % 60;
+                    alert(parseInt(nMin) + '分' + nSec + '秒');
+                }
+
+            };
+        };
+    </script>
+</head>
+<body>
+<input id="txt1" type="text">
+<input id="btn" type="button" value="秒转时间">
+</body>
+</html>
