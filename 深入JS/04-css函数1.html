@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        // 获取非行间样式
+        function getStyle(obj, name)
+        {
+            if (obj.currentStyle)
+            {
+                return obj.currentStyle[name];
+            }
+            else
+                {
+                return getComputedStyle(obj, false)[name];
+            }
+        }
+        window.onload = function ()
+        {
+            var oDiv = document.getElementById('div1');
+
+            alert(getStyle(oDiv,'width'));
+
+        };
+    </script>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+</html>

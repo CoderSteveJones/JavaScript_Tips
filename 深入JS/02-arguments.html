@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-arguments</title>
+    <script>
+        // arguments 为传入参数的数组
+        function sum() {
+            var result = 0;
+            for (var i=0;i < arguments.length;i++){
+                result += arguments[i];
+            }
+            return result;
+        }
+        alert(sum(1, 2, 3, 4));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-css函数</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+
+            var oDiv = document.getElementById('oDiv');
+            var oBtn = document.getElementById('oBtn');
+
+            function css() {
+                if (arguments.length == 2){
+                    return arguments[0].style[arguments[1]];
+                }else {
+                    arguments[0].style[arguments[1]] = arguments[2];
+                }
+            }
+            css(oDiv,'width','200px');
+        }
+    </script>
+</head>
+<body>
+<div id="oDiv"></div>
+</body>
+</html>

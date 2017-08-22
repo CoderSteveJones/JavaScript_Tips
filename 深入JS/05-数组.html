@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-数组</title>
+    <script>
+        // 1
+        var a = new Array(1,2);
+        alert(a.length);
+
+
+        // 2
+        var b = [1,2,3];
+        alert(b[2]);
+
+
+        // 尾部添加
+        a.push(2);
+
+        // 尾部删除
+        a.pop();
+
+        // 头部添加
+        a.unshift(2);
+
+        // 头部删除
+        a.shift();
+
+        // splice(location, length);
+        a.splice(2,1);
+
+        // splice(location, length, items); item 为插入的元素
+        a.splice(2,1,'a','b','c');
+
+
+        // 数组连接 concat
+        var b = [4,5,5];
+        alert(a.concat(b));
+
+        // 指定字符连接
+        alert(a.join(','));
+
+        // 排序
+        var arr = ['float', 'width', 'alpha']; // 按字母排序
+        alert(arr.sort());
+
+        // 数字排序
+        var arr1 = [12, 9, 123, 11];
+        alert(arr1.sort(function (n1, n2) {
+            if (n1 > n2){
+                return 1;
+            }else if (n1 < n2){
+                return -1;
+            }else {
+                return 0;
+            }
+        }));
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>
